@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Iterations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: white;
+            padding: 40px;
+        }
+        
+        .page {
+            width: 8.5in;
+            height: 11in;
+            background: white;
+            margin: 0 auto;
+            padding: 0.5in;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #5DD9C1;
+            padding-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .section-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #5DD9C1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+        
+        .iteration-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .iteration-box {
+            border: 2px solid #333;
+            padding: 12px;
+            background: #fafafa;
+            position: relative;
+        }
+        
+        .version-tag {
+            background: #333;
+            color: white;
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        
+        .rejected {
+            background: #ff6b6b;
+        }
+        
+        .selected {
+            background: #5DD9C1;
+        }
+        
+        .sketch-placeholder {
+            height: 140px;
+            border: 1px dashed #ccc;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 10px;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .feedback-list {
+            font-size: 10px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .feedback-list li {
+            margin-left: 15px;
+            margin-bottom: 3px;
+        }
+        
+        .xmark {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        
+        .checkmark {
+            color: #5DD9C1;
+            font-weight: bold;
+        }
+        
+        .detail-section {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+            margin-bottom: 20px;
+        }
+        
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .detail-placeholder {
+            height: 120px;
+            border: 1px dashed #ccc;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .caption {
+            font-size: 11px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 8px;
+        }
+        
+        .notes-box {
+            background: #fffbea;
+            padding: 12px;
+            border-left: 4px solid #f7c744;
+            font-size: 11px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        
+        .texture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        
+        .texture-box {
+            border: 2px solid #333;
+            padding: 10px;
+            background: #fafafa;
+            text-align: center;
+        }
+        
+        .texture-swatch {
+            height: 80px;
+            border: 1px dashed #ccc;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 9px;
+            margin-bottom: 6px;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media print {
+            body { padding: 0; }
+            .page { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>DESIGN ITERATIONS & REFINEMENTS</h1>
+            <p>Testing and Evolution of Key Features - Figure 4</p>
+        </div>
+        
+        <div class="section-label">Iteration 1: Optimizing Accordion Fold Count</div>
+        <div class="iteration-grid">
+            <div class="iteration-box">
+                <span class="version-tag rejected">VERSION 1 - REJECTED</span>
+                <div class="sketch-placeholder">
+                    [DRAW: Bottle with 3 shallow folds]<br>
+                    3 folds, each ~0.8" deep
+                </div>
+                <ul class="feedback-list">
+                    <li><span class="xmark">✗</span> Only 30% height reduction</li>
+                    <li><span class="xmark">✗</span> Doesn't collapse enough</li>
+                    <li><span class="xmark">✗</span> Still too bulky when empty</li>
+                </ul>
+            </div>
+            
+            <div class="iteration-box">
+                <span class="version-tag rejected">VERSION 2 - REJECTED</span>
+                <div class="sketch-placeholder">
+                    [DRAW: Bottle with 6 thin folds]<br>
+                    6 folds, each ~0.5" deep
+                </div>
+                <ul class="feedback-list">
+                    <li><span class="checkmark">✓</span> Excellent compression (70%)</li>
+                    <li><span class="xmark">✗</span> Too flexible/unstable when full</li>
+                    <li><span class="xmark">✗</span> Collapses under water weight</li>
+                </ul>
+            </div>
+            
+            <div class="iteration-box">
+                <span class="version-tag selected">VERSION 3 - FINAL ✓</span>
+                <div class="sketch-placeholder">
+                    [DRAW: Bottle with 4 medium folds]<br>
+                    4 folds, each ~0.9" deep
+                </div>
+                <ul class="feedback-list">
+                    <li><span class="checkmark">✓</span> 60% height reduction</li>
+                    <li><span class="checkmark">✓</span> Stable structure when filled</li>
+                    <li><span class="checkmark">✓</span> Perfect balance achieved</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="notes-box">
+            <strong>Testing Method:</strong> Created paper mockups at 1:1 scale, filled with water to test stability. Version 3 (4 folds) provided optimal balance between compactness and structural integrity. Folds deep enough for meaningful size reduction but not so numerous that bottle becomes floppy.
+        </div>
+        
+        <div class="section-label">Iteration 2: Cap Design Evolution</div>
+        <div class="detail-section">
+            <div class="detail-grid">
+                <div>
+                    <div class="detail-placeholder">
+                        [DRAW: Early cap - simple flat design]<br>
+                        V1: Basic magnetic snap lid
+                    </div>
+                    <div class="caption">Early Version</div>
+                    <ul class="feedback-list" style="margin-top: 8px;">
+                        <li><span class="xmark">✗</span> No carry handle</li>
+                        <li><span class="xmark">✗</span> Can't see contents</li>
+                        <li><span class="xmark">✗</span> Plain appearance</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <div class="detail-placeholder">
+                        [DRAW: Final cap with window, handle, texture]<br>
+                        V2: Refined with transparency & handle
+                    </div>
+                    <div class="caption">Final Version ✓</div>
+                    <ul class="feedback-list" style="margin-top: 8px;">
+                        <li><span class="checkmark">✓</span> Integrated carry loop</li>
+                        <li><span class="checkmark">✓</span> Transparent window shows fill level</li>
+                        <li><span class="checkmark">✓</span> Grip texture for wet hands</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="notes-box">
+                <strong>Why transparency matters:</strong> Users expressed concern about cleanliness verification. Transparent cap allows visual inspection without disassembly. Also helps users see fill level at a glance.
+            </div>
+        </div>
+        
+        <div class="section-label">Surface Texture & Material Details</div>
+        <div class="texture-grid">
+            <div class="texture-box">
+                <div class="texture-swatch">
+                    [DRAW: Smooth surface pattern]<br>
+                    Matte silicone body
+                </div>
+                <div class="caption">Body Surface</div>
+                <ul class="feedback-list" style="text-align: left; margin-top: 6px;">
+                    <li>Soft-touch matte</li>
+                    <li>Non-slip grip</li>
+                    <li>Fingerprint resistant</li>
+                </ul>
+            </div>
+            
+            <div class="texture-box">
+                <div class="texture-swatch">
+                    [DRAW: Cork-like texture pattern]<br>
+                    Natural cork texture
+                </div>
+                <div class="caption">Grip Ring ✓</div>
+                <ul class="feedback-list" style="text-align: left; margin-top: 6px;">
+                    <li>Tactile feedback</li>
+                    <li>Eco aesthetic</li>
+                    <li>Enhances grip</li>
+                </ul>
+            </div>
+            
+            <div class="texture-box">
+                <div class="texture-swatch">
+                    [DRAW: Glossy clear surface]<br>
+                    Clear BPA-free plastic
+                </div>
+                <div class="caption">Cap Material</div>
+                <ul class="feedback-list" style="text-align: left; margin-top: 6px;">
+                    <li>Crystal clear</li>
+                    <li>Food-safe</li>
+                    <li>Rigid structure</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Your Name | Water Bottle Redesign Project | Page 4 of 6
+        </div>
+    </div>
+</body>
+</html>
