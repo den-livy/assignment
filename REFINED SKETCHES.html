@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refined Design Sketches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: white;
+            padding: 40px;
+        }
+        
+        .page {
+            width: 8.5in;
+            height: 11in;
+            background: white;
+            margin: 0 auto;
+            padding: 0.5in;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #5DD9C1;
+            padding-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .sketch-section {
+            margin-bottom: 25px;
+        }
+        
+        .section-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #5DD9C1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .split-view {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .sketch-box {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+        }
+        
+        .sketch-placeholder {
+            height: 200px;
+            border: 1px dashed #ccc;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 11px;
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .label-list {
+            font-size: 11px;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .label-list li {
+            margin-left: 15px;
+        }
+        
+        .exploded-view {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+            margin-bottom: 20px;
+        }
+        
+        .exploded-placeholder {
+            height: 180px;
+            border: 1px dashed #ccc;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 11px;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .usage-box {
+            border: 2px solid #333;
+            padding: 10px;
+            background: #fafafa;
+            text-align: center;
+        }
+        
+        .usage-placeholder {
+            height: 100px;
+            border: 1px dashed #ccc;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 10px;
+            margin-bottom: 8px;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        .usage-caption {
+            font-size: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .dimension-box {
+            background: #fffbea;
+            padding: 12px;
+            border-left: 4px solid #5DD9C1;
+            font-size: 11px;
+            line-height: 1.8;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media print {
+            body { padding: 0; }
+            .page { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>REFINED DESIGN - DIGITAL SKETCHES</h1>
+            <p>Second Iteration with Measurements & Components - Figure 3</p>
+        </div>
+        
+        <div class="sketch-section">
+            <div class="section-label">Full Bottle Design - Expanded vs. Collapsed States</div>
+            <div class="split-view">
+                <div class="sketch-box">
+                    <div class="sketch-placeholder">
+                        [DRAW: Side view of bottle EXPANDED]<br><br>
+                        Show all 4 accordion folds extended<br>
+                        Add dimension arrows and measurements<br>
+                        Height: ~8 inches<br>
+                        Width: 3 inches diameter
+                    </div>
+                    <ul class="label-list">
+                        <li><strong>Total height:</strong> 8 inches (expanded)</li>
+                        <li><strong>Diameter:</strong> 3 inches</li>
+                        <li><strong>Capacity:</strong> 18 oz / 532 ml</li>
+                        <li><strong>Weight:</strong> 3.5 oz (empty)</li>
+                    </ul>
+                </div>
+                
+                <div class="sketch-box">
+                    <div class="sketch-placeholder">
+                        [DRAW: Side view of bottle COLLAPSED]<br><br>
+                        Show accordion folds compressed<br>
+                        Add dimension arrows<br>
+                        Height: ~3.2 inches<br>
+                        Width: 3 inches diameter
+                    </div>
+                    <ul class="label-list">
+                        <li><strong>Collapsed height:</strong> 3.2 inches (60% reduction)</li>
+                        <li><strong>Diameter:</strong> 3 inches (unchanged)</li>
+                        <li><strong>Space saved:</strong> Fits in palm of hand</li>
+                        <li><strong>Storage:</strong> Easily pockets or clips to bag</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sketch-section">
+            <div class="section-label">Exploded View - Component Breakdown</div>
+            <div class="exploded-view">
+                <div class="exploded-placeholder">
+                    [DRAW: Exploded axonometric view showing all parts separated vertically]<br><br>
+                    From top to bottom with spacing between each:<br>
+                    1. Transparent cap (with embedded magnets)<br>
+                    2. Carrying handle/loop<br>
+                    3. Textured grip ring (cork-like pattern) - DETACHABLE<br>
+                    4. Collapsible silicone body (4 accordion folds)<br>
+                    5. Logo/branding area on body<br>
+                    6. Detachable base ring (for stability)<br>
+                    7. Bottom seal/cap<br><br>
+                    Use arrows to show assembly direction
+                </div>
+                <div class="dimension-box" style="margin-top: 15px;">
+                    <strong>Key Design Features:</strong><br>
+                    • Magnetic cap with neodymium magnets for leak-proof seal<br>
+                    • Detachable grip ring allows access to all interior surfaces for cleaning<br>
+                    • Food-grade BPA-free silicone body (FDA approved)<br>
+                    • Transparent cap window shows fill level and cleanliness<br>
+                    • Modular design: every component can be separated and cleaned
+                </div>
+            </div>
+        </div>
+        
+        <div class="sketch-section">
+            <div class="section-label">Real-World Usage Scenarios</div>
+            <div class="usage-grid">
+                <div class="usage-box">
+                    <div class="usage-placeholder">
+                        [DRAW: Stick figure drinking while walking]
+                    </div>
+                    <div class="usage-caption">One-handed drinking</div>
+                </div>
+                
+                <div class="usage-box">
+                    <div class="usage-placeholder">
+                        [DRAW: Hands compressing empty bottle]
+                    </div>
+                    <div class="usage-caption">Collapsing when empty</div>
+                </div>
+                
+                <div class="usage-box">
+                    <div class="usage-placeholder">
+                        [DRAW: Bottle clipped to backpack strap]
+                    </div>
+                    <div class="usage-caption">Attached to bag strap</div>
+                </div>
+                
+                <div class="usage-box">
+                    <div class="usage-placeholder">
+                        [DRAW: Disassembled parts laid out]
+                    </div>
+                    <div class="usage-caption">All parts separated for cleaning</div>
+                </div>
+            </div>
+            
+            <div class="dimension-box" style="margin-top: 15px;">
+                <strong>User Persona Context:</strong> Emma, 24, graphic design student. Commutes 45 min by metro daily with 15" laptop, sketchbook, and textbooks. Previously had water bottle leak on electronics ($800 damage). Needs: lightweight, absolutely leak-proof, fits in side pocket when collapsed, dishwasher-safe components.
+            </div>
+        </div>
+        
+        <div class="footer">
+            Your Name | Water Bottle Redesign Project | Page 3 of 6
+        </div>
+    </div>
+</body>
+</html>
