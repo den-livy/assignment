@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context & Usage Scenarios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: white;
+            padding: 40px;
+        }
+        
+        .page {
+            width: 8.5in;
+            height: 11in;
+            background: white;
+            margin: 0 auto;
+            padding: 0.5in;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #5DD9C1;
+            padding-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .section-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #5DD9C1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            margin-top: 15px;
+        }
+        
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .scenario-box {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+        }
+        
+        .scenario-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+            background: #5DD9C1;
+            color: white;
+            padding: 6px;
+        }
+        
+        .scenario-placeholder {
+            height: 140px;
+            border: 1px dashed #ccc;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 10px;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .scenario-desc {
+            font-size: 11px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .journey-section {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+            margin-bottom: 20px;
+        }
+        
+        .journey-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: white;
+            background: #5DD9C1;
+            padding: 8px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .journey-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .step-box {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px 5px;
+            background: white;
+        }
+        
+        .step-number {
+            background: #5DD9C1;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .step-placeholder {
+            height: 80px;
+            border: 1px dashed #ccc;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 9px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        
+        .step-caption {
+            font-size: 10px;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.3;
+        }
+        
+        .cleaning-section {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+            margin-bottom: 15px;
+        }
+        
+        .cleaning-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        
+        .cleaning-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: white;
+        }
+        
+        .cleaning-placeholder {
+            height: 100px;
+            border: 1px dashed #ccc;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 9px;
+            margin-bottom: 8px;
+        }
+        
+        .cleaning-caption {
+            font-size: 10px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        
+        .cleaning-note {
+            font-size: 9px;
+            color: #666;
+            text-align: center;
+            line-height: 1.4;
+        }
+        
+        .notes-box {
+            background: #fffbea;
+            padding: 12px;
+            border-left: 4px solid #f7c744;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media print {
+            body { padding: 0; }
+            .page { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>REAL-WORLD CONTEXT & USER SCENARIOS</h1>
+            <p>How the Bottle Functions in Daily Life - Figure 6</p>
+        </div>
+        
+        <div class="section-label">User Scenarios - The Bottle in Context</div>
+        <div class="scenario-grid">
+            <div class="scenario-box">
+                <div class="scenario-title">THE COMMUTER</div>
+                <div class="scenario-placeholder">
+                    [SKETCH/PHOTO: Person on subway<br>
+                    with backpack, bottle visible in side pocket,<br>
+                    collapsed and clipped to strap]
+                </div>
+                <div class="scenario-desc">
+                    <strong>Sarah, 26, Marketing Professional</strong><br>
+                    45-min commute with laptop, documents, lunch. Previously had rigid bottle leak on iPad. Now carries collapsed bottle in outer pocket—expands at office water cooler. Clips to bag strap when full.
+                </div>
+            </div>
+            
+            <div class="scenario-box">
+                <div class="scenario-title">THE STUDENT</div>
+                <div class="scenario-placeholder">
+                    [SKETCH/PHOTO: Library desk scene<br>
+                    laptop, textbooks, bottle beside notebook,<br>
+                    studying environment]
+                </div>
+                <div class="scenario-desc">
+                    <strong>James, 21, Engineering Student</strong><br>
+                    Library sessions with 15" laptop, 3 textbooks, calculator. Every ounce matters. Bottle stays collapsed until needed, then sits beside laptop without fear of leaks. Transparent cap shows when refill is needed.
+                </div>
+            </div>
+            
+            <div class="scenario-box">
+                <div class="scenario-title">THE GYM-GOER</div>
+                <div class="scenario-placeholder">
+                    [SKETCH/PHOTO: Gym bag open showing<br>
+                    minimal contents: towel, shoes, collapsed bottle,<br>
+                    keys, phone]
+                </div>
+                <div class="scenario-desc">
+                    <strong>Alex, 29, Fitness Enthusiast</strong><br>
+                    Minimalist gym bag philosophy. Bottle arrives empty and collapsed (saves space), fills at gym fountain, stays secure during workout. Easy wipe-clean exterior handles sweat. All parts detach for dishwasher.
+                </div>
+            </div>
+            
+            <div class="scenario-box">
+                <div class="scenario-title">THE TRAVELER</div>
+                <div class="scenario-placeholder">
+                    [SKETCH/PHOTO: Airport security scene<br>
+                    or carry-on luggage with collapsed bottle<br>
+                    taking minimal space]
+                </div>
+                <div class="scenario-desc">
+                    <strong>Maria, 34, Consultant</strong><br>
+                    Weekly flights, strict carry-on limits. Bottle passes through airport security empty and flat (takes up less space than a phone). Fills after security. Magnetic closure never accidentally opens in bag during turbulence.
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-label">A Day in the Life - Usage Journey</div>
+        <div class="journey-section">
+            <div class="journey-title">Morning Commute to Evening Return</div>
+            <div class="journey-steps">
+                <div class="step-box">
+                    <div class="step-number">1</div>
+                    <div class="step-placeholder">
+                        [DRAW: Collapsed bottle<br>going into empty bag]
+                    </div>
+                    <div class="step-caption">7:00 AM<br>Pack collapsed<br>in bag</div>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">2</div>
+                    <div class="step-placeholder">
+                        [DRAW: Hand filling<br>bottle at office<br>water cooler]
+                    </div>
+                    <div class="step-caption">9:00 AM<br>Arrive & fill<br>at office</div>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">3</div>
+                    <div class="step-placeholder">
+                        [DRAW: Bottle on desk<br>next to laptop<br>during work]
+                    </div>
+                    <div class="step-caption">10:00 AM - 5:00 PM<br>Workday use<br>(refill 2-3x)</div>
+                </div>
+                
+                <div class="step-box">
+                    <div class="step-number">4</div>
+                    <div class="step-placeholder">
+                        [DRAW: Empty bottle<br>being compressed<br>back to small size]
+                    </div>
+                    <div class="step-caption">6:00 PM<br>Empty & collapse<br>for trip home</div>
+                </div>
+            </div>
+            
+            <div class="notes-box" style="margin-top: 15px;">
+                <strong>Key Insight:</strong> The bottle's value isn't just in its collapsed state—it's in the <em>flexibility</em> to adapt throughout the day. Full when needed, compact when not. This mirrors modern life: we move between contexts constantly and need objects that move with us.
+            </div>
+        </div>
+        
+        <div class="section-label">Weekly Cleaning Routine - Design for Maintenance</div>
+        <div class="cleaning-section">
+            <div class="cleaning-grid">
+                <div class="cleaning-box">
+                    <div class="cleaning-placeholder">
+                        [DRAW: All components<br>separated and laid out:<br>cap, ring, body, base]
+                    </div>
+                    <div class="cleaning-caption">Step 1: Disassemble</div>
+                    <div class="cleaning-note">
+                        All parts detach without tools in under 10 seconds
+                    </div>
+                </div>
+                
+                <div class="cleaning-box">
+                    <div class="cleaning-placeholder">
+                        [DRAW: Parts on top rack<br>of dishwasher or<br>being hand-washed]
+                    </div>
+                    <div class="cleaning-caption">Step 2: Wash</div>
+                    <div class="cleaning-note">
+                        Dishwasher-safe (top rack) or hand-wash with bottle brush
+                    </div>
+                </div>
+                
+                <div class="cleaning-box">
+                    <div class="cleaning-placeholder">
+                        [DRAW: Clean parts<br>drying on dish rack<br>or towel]
+                    </div>
+                    <div class="cleaning-caption">Step 3: Dry & Reassemble</div>
+                    <div class="cleaning-note">
+                        Air dry fully (no hidden crevices), snap back together
+                    </div>
+                </div>
+            </div>
+            
+            <div class="notes-box" style="margin-top: 12px;">
+                <strong>Solving the "Gross Bottle" Problem:</strong> Traditional water bottles develop odors because users can't reach inside to clean properly. Our modular design eliminates all hidden spaces—every surface is accessible. The detachable grip ring is particularly crucial: this is where residue typically accumulates but is usually impossible to clean.
+            </div>
+        </div>
+        
+        <div class="footer">
+            Your Name | Water Bottle Redesign Project | Page 6 of 6
+        </div>
+    </div>
+</body>
+</html>
