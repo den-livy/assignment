@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Development Process</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: white;
+            padding: 40px;
+        }
+        
+        .page {
+            width: 8.5in;
+            height: 11in;
+            background: white;
+            margin: 0 auto;
+            padding: 0.5in;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #5DD9C1;
+            padding-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .section-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #5DD9C1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+        
+        .modeling-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .model-box {
+            border: 2px solid #333;
+            padding: 12px;
+            background: #fafafa;
+        }
+        
+        .stage-tag {
+            background: #5DD9C1;
+            color: white;
+            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        
+        .model-placeholder {
+            height: 160px;
+            border: 1px dashed #ccc;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 10px;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .tech-notes {
+            font-size: 10px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .environment-section {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+            margin-bottom: 20px;
+        }
+        
+        .env-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .env-box {
+            border: 1px solid #ccc;
+            padding: 8px;
+            background: white;
+            text-align: center;
+        }
+        
+        .env-placeholder {
+            height: 100px;
+            border: 1px dashed #ccc;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 9px;
+            margin-bottom: 6px;
+        }
+        
+        .env-caption {
+            font-size: 10px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .env-result {
+            font-size: 9px;
+            color: #666;
+        }
+        
+        .selected-env {
+            border: 2px solid #5DD9C1;
+            background: #f0fffe;
+        }
+        
+        .lighting-section {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+            margin-bottom: 15px;
+        }
+        
+        .lighting-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        
+        .light-box {
+            border: 1px solid #ccc;
+            padding: 8px;
+            background: white;
+        }
+        
+        .light-placeholder {
+            height: 90px;
+            border: 1px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 9px;
+            margin-bottom: 6px;
+        }
+        
+        .light-caption {
+            font-size: 10px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+        
+        .selected-light {
+            border: 2px solid #5DD9C1;
+            background: #f0fffe;
+        }
+        
+        .notes-box {
+            background: #fffbea;
+            padding: 12px;
+            border-left: 4px solid #f7c744;
+            font-size: 11px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media print {
+            body { padding: 0; }
+            .page { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>3D MODELING & RENDERING PROCESS</h1>
+            <p>From Digital Sculpture to Final Render - Figure 5</p>
+        </div>
+        
+        <div class="section-label">Modeling Progress in Adobe Substance 3D Modeler / Blender</div>
+        <div class="modeling-grid">
+            <div class="model-box">
+                <span class="stage-tag">STAGE 1: WIREFRAME</span>
+                <div class="model-placeholder">
+                    [INSERT: Screenshot of wireframe view]<br>
+                    Show basic geometry structure<br>
+                    Visible edge flow and topology
+                </div>
+                <div class="tech-notes">
+                    • Started with cylinder primitive<br>
+                    • Created accordion profile using edge loops<br>
+                    • Subdivided for smooth curves
+                </div>
+            </div>
+            
+            <div class="model-box">
+                <span class="stage-tag">STAGE 2: BASE GEOMETRY</span>
+                <div class="model-placeholder">
+                    [INSERT: Screenshot of basic 3D form]<br>
+                    Solid model without textures<br>
+                    All components modeled
+                </div>
+                <div class="tech-notes">
+                    • Used displacement for fold depth<br>
+                    • Boolean operations for cap assembly<br>
+                    • Separate objects for each component
+                </div>
+            </div>
+            
+            <div class="model-box">
+                <span class="stage-tag">STAGE 3: TEXTURES APPLIED</span>
+                <div class="model-placeholder">
+                    [INSERT: Screenshot with materials]<br>
+                    Matte silicone body + cork ring<br>
+                    Transparent cap added
+                </div>
+                <div class="tech-notes">
+                    • Matte silicone: low roughness, subsurface scattering<br>
+                    • Cork texture: procedural noise + displacement map<br>
+                    • Transparent plastic: IOR 1.49, slight tint
+                </div>
+            </div>
+            
+            <div class="model-box">
+                <span class="stage-tag">STAGE 4: FINAL RENDER</span>
+                <div class="model-placeholder">
+                    [INSERT: Final rendered image]<br>
+                    With lighting and environment<br>
+                    Production-quality output
+                </div>
+                <div class="tech-notes">
+                    • Rendered in Adobe 3D Stager / Blender Cycles<br>
+                    • 1920x1080 resolution, 256 samples<br>
+                    • Post-processing: slight vignette, color grade
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-label">Environment Testing - Finding the Right Context</div>
+        <div class="environment-section">
+            <div class="env-grid">
+                <div class="env-box">
+                    <div class="env-placeholder">
+                        [INSERT: Render on white desk<br>with laptop & notebook]
+                    </div>
+                    <div class="env-caption">Minimalist Desk</div>
+                    <div class="env-result">Clean but lacks context</div>
+                </div>
+                
+                <div class="env-box selected-env">
+                    <div class="env-placeholder">
+                        [INSERT: Neutral studio backdrop<br>with soft shadows]
+                    </div>
+                    <div class="env-caption">Studio Setup ✓ SELECTED</div>
+                    <div class="env-result">Focus on product design</div>
+                </div>
+                
+                <div class="env-box">
+                    <div class="env-placeholder">
+                        [INSERT: Outdoor hiking scene<br>with rocks/nature]
+                    </div>
+                    <div class="env-caption">Outdoor Context</div>
+                    <div class="env-result">Too busy, distracts from form</div>
+                </div>
+            </div>
+            
+            <div class="notes-box">
+                <strong>Environment Decision:</strong> Selected neutral studio backdrop (gray gradient) to emphasize the bottle's form and material qualities. This environment communicates the minimalist design philosophy without competing visual elements. The subtle ground shadow provides spatial grounding while keeping attention on the product.
+            </div>
+        </div>
+        
+        <div class="section-label">Lighting Studies - Visual Impact Testing</div>
+        <div class="lighting-section">
+            <div class="lighting-grid">
+                <div class="light-box">
+                    <div class="light-placeholder" style="background: linear-gradient(to bottom, #fff 0%, #ddd 100%);">
+                        [Harsh Direct Light]<br>
+                        Hard shadows
+                    </div>
+                    <div class="light-caption">Direct Sunlight ✗</div>
+                    <div class="tech-notes">Too harsh, unflattering shadows</div>
+                </div>
+                
+                <div class="light-box selected-light">
+                    <div class="light-placeholder" style="background: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);">
+                        [Soft Diffused Light]<br>
+                        Gentle shadows
+                    </div>
+                    <div class="light-caption">Studio Softbox ✓</div>
+                    <div class="tech-notes">Perfect: emphasizes curves, approachable</div>
+                </div>
+                
+                <div class="light-box">
+                    <div class="light-placeholder" style="background: linear-gradient(to right, #222 0%, #f0f0f0 100%);">
+                        [Dramatic Side Light]<br>
+                        Strong contrast
+                    </div>
+                    <div class="light-caption">Dramatic Rim ✗</div>
+                    <div class="tech-notes">Too theatrical, not functional</div>
+                </div>
+            </div>
+            
+            <div class="notes-box" style="margin-top: 12px;">
+                <strong>Lighting Rationale:</strong> Soft, diffused lighting from above-front (45° angle) was chosen to highlight the bottle's gentle curves and matte texture. This creates approachable, friendly aesthetic that communicates the product's everyday usability. Subtle rim light from behind adds depth without being dramatic.
+            </div>
+        </div>
+        
+        <div class="footer">
+            Your Name | Water Bottle Redesign Project | Page 5 of 6
+        </div>
+    </div>
+</body>
+</html>
