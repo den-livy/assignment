@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initial Concept Sketches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: white;
+            padding: 40px;
+        }
+        
+        .page {
+            width: 8.5in;
+            height: 11in;
+            background: white;
+            margin: 0 auto;
+            padding: 0.5in;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #5DD9C1;
+            padding-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .sketch-section {
+            margin-bottom: 30px;
+        }
+        
+        .section-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #5DD9C1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .sketch-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .sketch-box {
+            border: 2px solid #333;
+            padding: 15px;
+            background: #fafafa;
+            position: relative;
+            min-height: 180px;
+        }
+        
+        .sketch-placeholder {
+            text-align: center;
+            color: #999;
+            font-size: 11px;
+            padding: 20px 10px;
+            border: 1px dashed #ccc;
+            background: white;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sketch-label {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .annotation {
+            font-size: 10px;
+            color: #666;
+            margin-top: 8px;
+            line-height: 1.4;
+            font-style: italic;
+        }
+        
+        .checkmark {
+            color: #5DD9C1;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .xmark {
+            color: #ff6b6b;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .large-sketch {
+            border: 2px solid #333;
+            padding: 20px;
+            background: #fafafa;
+            margin-bottom: 15px;
+        }
+        
+        .large-placeholder {
+            height: 200px;
+            border: 1px dashed #ccc;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .notes-box {
+            background: #fffbea;
+            padding: 12px;
+            border-left: 4px solid #f7c744;
+            font-size: 11px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        
+        .arrow {
+            font-size: 20px;
+            color: #5DD9C1;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media print {
+            body { padding: 0; }
+            .page { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>INITIAL BRAINSTORMING SKETCHES</h1>
+            <p>First Iteration - Hand-Drawn Concepts - Figure 2</p>
+        </div>
+        
+        <div class="sketch-section">
+            <div class="section-label">Exploration: Multiple Bottle Body Concepts</div>
+            <div class="sketch-grid">
+                <div class="sketch-box">
+                    <div class="sketch-label">Concept A: Vertical Accordion</div>
+                    <div class="sketch-placeholder">
+                        [DRAW: Bottle with horizontal folds stacked vertically - 4 folds]
+                    </div>
+                    <div class="annotation">
+                        <span class="checkmark">✓</span> Most compact when collapsed<br>
+                        <span class="checkmark">✓</span> Stable structure when full<br>
+                        <span class="arrow">→</span> SELECTED for development
+                    </div>
+                </div>
+                
+                <div class="sketch-box">
+                    <div class="sketch-label">Concept B: Telescoping Segments</div>
+                    <div class="sketch-placeholder">
+                        [DRAW: Bottle with rigid segments that slide into each other]
+                    </div>
+                    <div class="annotation">
+                        <span class="checkmark">✓</span> Very stable<br>
+                        <span class="xmark">✗</span> Heavier (rigid materials)<br>
+                        <span class="xmark">✗</span> Hard to clean between segments
+                    </div>
+                </div>
+                
+                <div class="sketch-box">
+                    <div class="sketch-label">Concept C: Twist-Collapse</div>
+                    <div class="sketch-placeholder">
+                        [DRAW: Bottle with spiral fold pattern]
+                    </div>
+                    <div class="annotation">
+                        <span class="checkmark">✓</span> Interesting mechanism<br>
+                        <span class="xmark">✗</span> Too complex to manufacture<br>
+                        <span class="xmark">✗</span> Difficult to use one-handed
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sketch-grid">
+                <div class="sketch-box">
+                    <div class="sketch-label">Concept D: Flexible Pouch</div>
+                    <div class="sketch-placeholder">
+                        [DRAW: Soft bag-style bottle, no structure]
+                    </div>
+                    <div class="annotation">
+                        <span class="checkmark">✓</span> Ultra-lightweight<br>
+                        <span class="xmark">✗</span> No structure when full<br>
+                        <span class="xmark">✗</span> Hard to drink from
+                    </div>
+                </div>
+                
+                <div class="sketch-box">
+                    <div class="sketch-label">Concept E: Origami Fold</div>
+                    <div class="sketch-placeholder">
+                        [DRAW: Bottle with angular geometric folds]
+                    </div>
+                    <div class="annotation">
+                        <span class="checkmark">✓</span> Visually unique<br>
+                        <span class="xmark">✗</span> Sharp edges uncomfortable<br>
+                        <span class="xmark">✗</span> Stress points would fail
+                    </div>
+                </div>
+                
+                <div class="sketch-box">
+                    <div class="sketch-label">Concept F: Roll-Up Design</div>
+                    <div class="sketch-placeholder">
+                        [DRAW: Bottle that rolls from bottom like toothpaste]
+                    </div>
+                    <div class="annotation">
+                        <span class="checkmark">✓</span> Simple mechanism<br>
+                        <span class="xmark">✗</span> Awkward to use<br>
+                        <span class="xmark">✗</span> Can't set down when rolled
+                    </div>
+                </div>
+            </div>
+            
+            <div class="notes-box">
+                <strong>DECISION:</strong> Vertical accordion (Concept A) provides the best balance of compactness, stability, ease of use, and cleanability. The horizontal folds allow natural compression while maintaining circular cross-section for comfortable drinking.
+            </div>
+        </div>
+        
+        <div class="sketch-section">
+            <div class="section-label">Lid & Closure Mechanism Exploration</div>
+            <div class="large-sketch">
+                <div class="sketch-label">Cap Options (draw side-by-side comparisons)</div>
+                <div class="large-placeholder">
+                    [DRAW 4 different lid designs:]<br>
+                    1. Screw cap (traditional threads)<br>
+                    2. Flip-top sport cap<br>
+                    3. <strong>Magnetic snap closure ✓ SELECTED</strong><br>
+                    4. Push-pull silicone nozzle
+                </div>
+                <div class="annotation" style="margin-top: 15px;">
+                    <strong>Why magnetic closure?</strong><br>
+                    • No threads = easier to clean (no trapped residue)<br>
+                    • Strong seal prevents leaks (neodymium magnets)<br>
+                    • One-handed operation (snap on/off)<br>
+                    • Satisfying tactile feedback when closing<br>
+                    • Transparent cap shows fill level and cleanliness
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Your Name | Water Bottle Redesign Project | Page 2 of 6
+        </div>
+    </div>
+</body>
+</html>
