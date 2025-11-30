@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodboard - Collapsible Water Bottle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: white;
+            padding: 40px;
+        }
+        
+        .page {
+            width: 8.5in;
+            height: 11in;
+            background: white;
+            margin: 0 auto;
+            padding: 0.5in;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #5DD9C1;
+            padding-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #5DD9C1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .image-placeholder {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #999;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .notes {
+            background: #fffbea;
+            padding: 12px;
+            border-left: 4px solid #f7c744;
+            font-size: 12px;
+            line-height: 1.6;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .annotation {
+            background: #fff;
+            padding: 8px;
+            border: 1px solid #5DD9C1;
+            font-size: 11px;
+            margin-top: 5px;
+            border-radius: 3px;
+            color: #333;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>COLLAPSIBLE WATER BOTTLE</h1>
+            <p>Investigation / Inspiration / Discovery - Figure 1</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Problem Identification</div>
+            <div class="image-grid">
+                <div class="image-placeholder">
+                    Heavy backpack with rigid bottle taking up space
+                </div>
+                <div class="image-placeholder">
+                    Water damage from leaky bottles in bags
+                </div>
+                <div class="image-placeholder">
+                    Difficult-to-clean traditional bottle interior
+                </div>
+            </div>
+            <div class="notes">
+                "Too heavy when carrying laptop + books" | "Leaks in my bag every week" | "Can't reach inside to clean properly - develops smell"
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Existing Solutions Research</div>
+            <div class="two-col">
+                <div>
+                    <div class="image-placeholder" style="height: 120px;">
+                        Current collapsible bottles<br>(Que Bottle, Nomader, Hydaway)
+                    </div>
+                    <div class="annotation">
+                        ✓ Space-saving<br>
+                        ✗ Still hard to clean<br>
+                        ✗ Weak closure systems
+                    </div>
+                </div>
+                <div>
+                    <div class="image-placeholder" style="height: 120px;">
+                        Traditional rigid bottles<br>(Nalgene, Hydro Flask)
+                    </div>
+                    <div class="annotation">
+                        ✓ Durable & leakproof<br>
+                        ✗ Bulky when empty<br>
+                        ✗ Heavy
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Design Inspiration</div>
+            <div class="image-grid">
+                <div class="image-placeholder">
+                    Minimalist product design<br>(Muji, Apple)
+                </div>
+                <div class="image-placeholder">
+                    Soft-touch materials<br>(Matte silicone finishes)
+                </div>
+                <div class="image-placeholder">
+                    Modular designs<br>(Easy disassembly)
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">User Context & Daily Scenarios</div>
+            <div class="image-grid">
+                <div class="image-placeholder">
+                    Commuter on public transit with full backpack
+                </div>
+                <div class="image-placeholder">
+                    Student at library desk - laptop + books + bottle
+                </div>
+                <div class="image-placeholder">
+                    Gym bag with minimal essentials
+                </div>
+            </div>
+            <div class="notes">
+                TARGET USER: Urban professionals and students who prioritize portability, cleanliness, and minimalist aesthetics. Every item must justify its weight and space.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Key Design Questions</div>
+            <div class="notes">
+                • How can we reduce BOTH weight AND volume?<br>
+                • Can we create a leakproof seal that's also easy to operate?<br>
+                • How do we design for disassembly to enable thorough cleaning?<br>
+                • What materials balance durability, safety, and tactile appeal?
+            </div>
+        </div>
+        
+        <div class="footer">
+            Your Name | Water Bottle Redesign Project | Page 1 of 6
+        </div>
+    </div>
+</body>
+</html>
