@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Bottle Redesign Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: white;
+            padding: 40px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #5DD9C1;
+            padding-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .nav-container {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin: 0;
+        }
+        
+        .nav-menu a {
+            display: block;
+            padding: 10px 20px;
+            background: #5DD9C1;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            background: #4ac7af;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .page-card {
+            border: 2px solid #5DD9C1;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            background: #5DD9C1;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .card-body {
+            padding: 20px;
+            min-height: 150px;
+        }
+        
+        .card-footer {
+            padding: 15px;
+            text-align: center;
+            background: #f5f5f5;
+        }
+        
+        .card-footer a {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .card-footer a:hover {
+            background: #5DD9C1;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-menu a {
+                width: 200px;
+                text-align: center;
+            }
+            
+            .page-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Water Bottle Redesign Project</h1>
+            <p>From Concept to Final Design - Complete Process Documentation</p>
+        </div>
+        
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="MOODBOARD.html">Moodboard</a></li>
+                <li><a href="SKETCH PAGE.html">Initial Sketches</a></li>
+                <li><a href="REFINED SKETCHES.html">Refined Sketches</a></li>
+                <li><a href="Design Iteration.html">Design Iterations</a></li>
+                <li><a href="3d development.html">3D Development</a></li>
+                <li><a href="Final_context.html">Final Context</a></li>
+            </ul>
+        </div>
+        
+        <div class="page-grid">
+            <div class="page-card">
+                <div class="card-header">
+                    <h2>Moodboard</h2>
+                </div>
+                <div class="card-body">
+                    <p>Initial research, inspiration, and problem identification for the collapsible water bottle project.</p>
+                    <p>Includes user context, existing solutions, and key design questions.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="MOODBOARD.html">View Page</a>
+                </div>
+            </div>
+            
+            <div class="page-card">
+                <div class="card-header">
+                    <h2>Initial Sketches</h2>
+                </div>
+                <div class="card-body">
+                    <p>First iteration of hand-drawn concepts exploring multiple bottle body designs and closure mechanisms.</p>
+                    <p>Includes evaluation of different collapsible approaches.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="SKETCH PAGE.html">View Page</a>
+                </div>
+            </div>
+            
+            <div class="page-card">
+                <div class="card-header">
+                    <h2>Refined Sketches</h2>
+                </div>
+                <div class="card-body">
+                    <p>Second iteration with measurements, components, and exploded views of the selected design.</p>
+                    <p>Includes real-world usage scenarios and user persona context.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="REFINED SKETCHES.html">View Page</a>
+                </div>
+            </div>
+            
+            <div class="page-card">
+                <div class="card-header">
+                    <h2>Design Iterations</h2>
+                </div>
+                <div class="card-body">
+                    <p>Testing and evolution of key features including fold count optimization and cap design.</p>
+                    <p>Includes surface texture and material details.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="Design Iteration.html">View Page</a>
+                </div>
+            </div>
+            
+            <div class="page-card">
+                <div class="card-header">
+                    <h2>3D Development</h2>
+                </div>
+                <div class="card-body">
+                    <p>Complete 3D modeling and rendering process from wireframe to final render.</p>
+                    <p>Includes environment testing and lighting studies for visual impact.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="3d development.html">View Page</a>
+                </div>
+            </div>
+            
+            <div class="page-card">
+                <div class="card-header">
+                    <h2>Final Context</h2>
+                </div>
+                <div class="card-body">
+                    <p>Real-world usage scenarios and user journey mapping.</p>
+                    <p>Includes cleaning routine and design for maintenance considerations.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="Final_context.html">View Page</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Your Name | Water Bottle Redesign Project | Complete Process Documentation
+        </div>
+    </div>
+</body>
+</html>
